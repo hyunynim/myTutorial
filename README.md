@@ -1,2 +1,4 @@
 # myTutorial
-django tutorial
+
+
+My first tutorial for django
