@@ -1,4 +1,5 @@
 from django.shortcuts import render
+from .models import myTestPageDB
 
 import sqlite3
 
@@ -36,3 +37,8 @@ def UploadInfo(_request):
         addInfo(name, age)
 
     return render(_request, 'myTestPage/result.html', {'result':resultMessage})
+    
+def GetList(_request):
+    dataList = myTestPageDB.objects.all()
+    context = {'dataList' : dataList}
+    return render(_request, 'myTestPage/list.html', context)
