@@ -6,5 +6,11 @@
 </head>
 <body>
     테스트 페이지
+    <form action="/UploadInfo" method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        <p>Name: <input type="text" name="name"></p>
+        <p>Age: <input type="text" name="age"></p>
+        <button type="submit">Upload</button>
+    </form>
 </body>
 </html>
