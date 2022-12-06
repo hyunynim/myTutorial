@@ -20,4 +20,5 @@ import myTestPage.views
 urlpatterns = [
     path("admin/", admin.site.urls),
     path('', myTestPage.views.IndexPage),
+    path('UploadInfo', myTestPage.views.UploadInfo),
 ]
